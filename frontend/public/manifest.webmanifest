@@ -1,0 +1,8 @@
+{
+  "name": "FINORA - Smart Personal Finance",
+  "short_name": "FINORA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#03150f",
+  "theme_color": "#03150f"
+}
