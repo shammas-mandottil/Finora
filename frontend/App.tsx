@@ -4,10 +4,10 @@ import Home from "./src/pages/Home";
 import Login from "./src/pages/Login";
 import Dashboard from "./src/pages/Dashboard";
 
+type Page = "home" | "login" | "dashboard";
+
 export default function App() {
-  const [page, setPage] = useState<
-    "home" | "login" | "dashboard"
-  >("home");
+  const [page, setPage] = useState<Page>("home");
 
   if (page === "login") {
     return (
@@ -19,17 +19,8 @@ export default function App() {
   }
 
   if (page === "dashboard") {
-    return (
-      <Dashboard
-        logout={() => setPage("home")}
-      />
-    );
+    return <Dashboard logout={() => setPage("home")} />;
   }
 
-  return (
-    <Home
-      goLogin={() => setPage("login")}
-    />
-  );
+  return <Home goLogin={() => setPage("login")} />;
 }
-
